@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D6D6D6; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FranquiasController">
+   <children>
+      <Text layoutX="344.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Franquias" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane accessibleText="Registration" layoutX="21.0" layoutY="100.0" prefHeight="209.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="19.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="22.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Local:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="15.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nomeid" layoutX="139.0" layoutY="16.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="localid" layoutX="138.0" layoutY="53.0" prefHeight="25.0" prefWidth="185.0" />
+            <Text fill="WHITE" layoutX="28.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cepid" layoutX="139.0" layoutY="128.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="cidadeid" layoutX="139.0" layoutY="92.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="rendaid" layoutX="139.0" layoutY="171.0" prefHeight="25.0" prefWidth="185.0" />
+            <Text fill="WHITE" layoutX="15.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renda:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnid" layoutX="21.0" layoutY="323.0" mnemonicParsing="false" onAction="#save" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Save" textFill="WHITE" />
+      <Button fx:id="btnid" layoutX="146.0" layoutY="323.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Voltar" textFill="WHITE" />
+      <Button layoutX="271.0" layoutY="323.0" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Clear" textFill="WHITE" />
+      <Button layoutX="460.0" layoutY="407.0" mnemonicParsing="false" onAction="#update" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Update" textFill="WHITE" />
+      <Button layoutX="624.0" layoutY="407.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Delete" textFill="WHITE" />
+      <AnchorPane layoutX="21.0" layoutY="387.0" prefHeight="90.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Franquias ID:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="franquiaid" layoutX="134.0" layoutY="33.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="201.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabelaid" layoutX="426.0" layoutY="99.0" prefHeight="269.0" prefWidth="350.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="tabelaidid" prefWidth="35.0" text="ID" />
+          <TableColumn fx:id="tabelanomeid" prefWidth="59.0" text="Nome" />
+            <TableColumn fx:id="tabelaedicaoid" prefWidth="74.0" text="Local" />
+            <TableColumn fx:id="tabelaprecoid" prefWidth="46.0" text="Cidade" />
+            <TableColumn fx:id="tabelaprecoid1" prefWidth="75.0" text="CEP" />
+            <TableColumn fx:id="tabelaprecoid11" prefWidth="59.0" text="Renda" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

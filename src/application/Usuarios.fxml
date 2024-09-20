@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D6D6D6; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UsuariosController">
+   <children>
+      <Text layoutX="307.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Usuarios" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane accessibleText="Registration" layoutX="21.0" layoutY="100.0" prefHeight="209.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="19.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="16.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="18.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usuarionameid" layoutX="139.0" layoutY="16.0" prefHeight="25.0" prefWidth="185.0" />
+            <TextField fx:id="emailid" layoutX="138.0" layoutY="65.0" prefHeight="25.0" prefWidth="185.0" />
+            <PasswordField fx:id="senhaid" layoutX="139.0" layoutY="116.0" prefHeight="23.0" prefWidth="185.0" />
+            <Text fill="WHITE" layoutX="18.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cpfid" layoutX="138.0" layoutY="160.0" prefHeight="25.0" prefWidth="185.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnid" layoutX="21.0" layoutY="323.0" mnemonicParsing="false" onAction="#save" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Save" textFill="WHITE" />
+      <Button fx:id="btnid" layoutX="146.0" layoutY="323.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Voltar" textFill="WHITE" />
+      <Button layoutX="271.0" layoutY="323.0" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Clear" textFill="WHITE" />
+      <Button layoutX="460.0" layoutY="407.0" mnemonicParsing="false" onAction="#update" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Update" textFill="WHITE" />
+      <Button layoutX="624.0" layoutY="407.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Delete" textFill="WHITE" />
+      <AnchorPane layoutX="21.0" layoutY="387.0" prefHeight="90.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="20.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario ID:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usuarioid" layoutX="127.0" layoutY="33.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="209.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabelaid" layoutX="426.0" layoutY="99.0" prefHeight="269.0" prefWidth="350.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="tabelaidid" prefWidth="41.0" text="ID" />
+          <TableColumn fx:id="tabelanomeid" prefWidth="81.0" text="Nome" />
+            <TableColumn fx:id="tabelaedicaoid" prefWidth="74.0" text="E-mail" />
+            <TableColumn fx:id="tabelaprecoid" prefWidth="70.0" text="Senha" />
+            <TableColumn fx:id="tabelaprecoid1" prefWidth="82.0" text="CPF" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

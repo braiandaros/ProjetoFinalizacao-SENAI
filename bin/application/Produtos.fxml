@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #D6D6D6; -fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProdutosController">
+   <children>
+      <Text layoutX="291.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tabela de Produtos" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane accessibleText="Registration" layoutX="21.0" layoutY="100.0" prefHeight="209.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nome produto:" textAlignment="CENTER" wrappingWidth="123.46875">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="19.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="descricao:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="19.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="preco:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="produtonomeid" layoutX="156.0" layoutY="29.0" prefHeight="25.0" prefWidth="168.0" />
+            <TextField fx:id="descricaoid" layoutX="156.0" layoutY="91.0" prefHeight="25.0" prefWidth="168.0" />
+            <TextField fx:id="precoid" layoutX="156.0" layoutY="154.0" prefHeight="25.0" prefWidth="168.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="21.0" layoutY="323.0" mnemonicParsing="false" onAction="#save" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Save" textFill="WHITE" />
+      <Button layoutX="146.0" layoutY="323.0" mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Voltar" textFill="WHITE" />
+      <Button fx:id="btnid" layoutX="271.0" layoutY="323.0" mnemonicParsing="false" onAction="#clear" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Clear" textFill="WHITE" />
+      <Button layoutX="460.0" layoutY="407.0" mnemonicParsing="false" onAction="#update" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Update" textFill="WHITE" />
+      <Button layoutX="624.0" layoutY="407.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #468CFF;" text="Delete" textFill="WHITE" />
+      <AnchorPane layoutX="21.0" layoutY="387.0" prefHeight="90.0" prefWidth="350.0" style="-fx-border-color: black; -fx-background-color: #468CFF;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produto ID:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="produtoid" layoutX="149.0" layoutY="33.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="168.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabelaid" layoutX="426.0" layoutY="99.0" prefHeight="269.0" prefWidth="350.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="tabelaidid" text="ID" />
+          <TableColumn fx:id="tabelanomeid" prefWidth="86.0" text="Nome" />
+            <TableColumn fx:id="tabelaedicaoid" prefWidth="91.0" text="Edição" />
+            <TableColumn fx:id="tabelaprecoid" prefWidth="91.0" text="Preço" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
