@@ -2,8 +2,6 @@
 
 Este projeto é um sistema CRUD (Create, Read, Update, Delete) desenvolvido em **Java** com **JavaFX**, destinado à gestão de uma franquia de lojas. Ele está integrado a um banco de dados para o armazenamento das informações, permitindo o gerenciamento completo de usuários, produtos e vendas.
 
-Infelizmente, no momento, o sistema está enfrentando um problema relacionado à integração com o banco de dados. Estamos trabalhando para resolver essa questão, e uma versão futura será disponibilizada com todas as funcionalidades completamente operacionais. Agradeços pela compreensão.
-
 ## Funcionalidades
 
 - **Cadastro de usuários**: Permite adicionar, visualizar, editar e excluir usuários do sistema.
